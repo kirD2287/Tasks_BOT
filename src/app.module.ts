@@ -21,7 +21,7 @@ const sessions = new LocalSession({database: 'session_db.json'})
       port: 5432,
       database: 'tasks_tg_bot',
       username: 'postgres',
-      password: '123865',
+      password: process.env.DB_PASS,
       entities: [join(__dirname, '**', '*.entity.{ts,js}')],
       migrations: [join(__dirname, '**', '*.migration.{ts,js}')],
       synchronize: true,
